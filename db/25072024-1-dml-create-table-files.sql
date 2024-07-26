@@ -1,0 +1,9 @@
+CREATE TABlE IF NOT EXISTS "files" (
+    "id" SERIAL PRIMARY KEY,
+    "name" TEXT NOT NULL,
+    "extension" TEXT NOT NULL,
+    "mime_type" TEXT NOT NULL,
+    "size" NUMERIC NOT NULL,
+    "created_at" TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+    "updated_at" TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+);

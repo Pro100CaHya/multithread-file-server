@@ -1,3 +1,7 @@
+import { config } from "dotenv";
+
 import { Cluster } from "./app";
 
-const cluster = new Cluster(16);
+config();
+
+const cluster = new Cluster(Number(process.env.CLUSTER_REPLICAS));
